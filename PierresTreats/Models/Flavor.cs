@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace PierresTreats.Models
 {
-  public class FlavorTreat
+  public class Flavor
   {
     public Flavor()
     {

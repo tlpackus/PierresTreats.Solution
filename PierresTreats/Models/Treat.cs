@@ -3,7 +3,7 @@ using System;
 
 namespace PierresTreats.Models
 {
-  public class PierresTreats
+  public class Treat
   {
     public Treat()
     {
