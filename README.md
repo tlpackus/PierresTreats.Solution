@@ -19,7 +19,7 @@
 
 ## Description
 
-
+This is an application to market Pierre's sweet and savory treats. The application needed to include a many to many relationship between treats and flavors. Also I had to use authentication and authorization so only registered users had full CRUD functionality.
 
 ## Setup/Installation Requirements
 
