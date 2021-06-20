@@ -3,9 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using PierresTreats.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace PierresTreats.Controllers
 {
+  [Authorize]
   public class FlavorsController: Controller
   {
     private readonly PierresTreatsContext _db;
@@ -13,7 +16,7 @@ namespace PierresTreats.Controllers
     {
       _db = db;
     }
-
+    [AllowAnonymous]
     public ActionResult Index()
     {
       List<Flavor> model = _db.Flavors.ToList();
@@ -31,6 +34,7 @@ namespace PierresTreats.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    [AllowAnonymous]
     public ActionResult Details(int id)
     {
       Flavor thisFlavor = _db.Flavors
